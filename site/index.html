@@ -1,9 +1,67 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Hi everyone</title>
-    </head>
-    <body>
-        <h1>Great weather tomorrow!</h1>
-    </body>
+  <head>
+    <title>Я тебе кохаю, Машуня!</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 2rem;
+        text-align: center;
+        background-color: #f8f8f8;
+      }
+      #heart-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      #heart {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 50px;
+        background-image: url('heart.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation: falling-hearts 1s ease infinite;
+      }
+      @keyframes falling-hearts {
+        from {
+          top: 0;
+          opacity: 1;
+        }
+        to {
+          top: 100%;
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Я тебе кохаю, Машуня!</h1>
+    <div id="heart-container">
+      <div id="heart"></div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const heartContainer = document.getElementById('heart-container');
+        heartContainer.addEventListener('click', () => {
+          for (let i = 0; i < 10; i++) {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDelay = Math.random() * 2 + 's';
+            heartContainer.appendChild(heart);
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
