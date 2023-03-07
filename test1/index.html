@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Some title</title>
+        <style>
+            h1 {
+                color: blueviolet;
+            }
+            #testID, .setBlue{
+                color: blue;
+            }
+            div.setPink{
+                color: pink;
+            }
+            section span{
+                color: aquamarine;
+            }
+            section > article{
+                color: brown;
+            }
+            .setBlue.setPink{
+                color: blueviolet;
+            }
+            .fontTest{
+                font-family:Arial, Helvetica, sans-serif;
+                color: rgb(80, 10, 97);
+                font-style: italic;
+                font-weight: 500;
+                font-size: 20px;
+                text-transform: inherit;
+                text-align: justify;
+            }
+            .biggerText{
+                font-size: 120%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Its h1</h1>
+        <h2 class="setBlue">Its h2 with style "setBlue"</h2>
+        <h2 id="testID">Its h2 with id testID</h2>
+        <div class="setPink">Its blue with style "div.setPink"</div>    
+        <span class="setPink">Its span with style "div.setPink"</span>
+        <section>
+            <span>Its span in section with "section span"</span>
+            <div>
+                <article>Its article in p in div with "section &gt; div"</article>
+                <span>Its span in div in section with "section span"</span>
+            </div>
+            <article>Its article in section with "section &gt; div"</article>        
+            <article class="setBlue setPink">Its article in section with "setBlue setPink"</article>
+        </section>
+        <p class="fontTest">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum risus ac quam viverra, sed facilisis magna mollis. Nulla mattis consectetur ex. Maecenas molestie ultrices nibh vitae viverra. Vivamus at pulvinar lorem. Fusce vel turpis nec nisl scelerisque luctus sit amet quis arcu. Curabitur aliquet scelerisque nisi in auctor. Morbi sit amet est vitae lorem aliquet molestie a vel tellus.
+
+            Duis ac felis et urna maximus vestibulum. Fusce malesuada facilisis tellus, vel lacinia justo condimentum non. Maecenas fermentum efficitur convallis. Nullam tristique sodales posuere. Aliquam elementum tortor at suscipit rhoncus. Curabitur tristique porta laoreet. Aenean sodales magna massa, vitae tristique.
+        </p>
+        <div class="biggerText">Regular text 120%
+            <div style="font-size: 2em;">2em text
+                <div style="font-size: 2em;">4em text
+                    <div style="font-size: .5em;">2em text again!</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
